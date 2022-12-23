@@ -1,0 +1,21 @@
+@media print {
+    header{
+        display: none;
+    }
+    footer{
+        display: none;
+    }
+    .page-banner-wrap{
+        display: none;
+    }
+    .main-sidebar{
+        display: none;
+    }
+    .print-js{
+        display: none;
+    }
+    #scrollUp{
+        display: none;
+    }
+   
+}

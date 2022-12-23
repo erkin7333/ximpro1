@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load i18n static %}
+{% block content %}
+    
+    <div class="page-banner-wrap bg-cover" style="background-image: url('{% static 'assets/img/page-banner.jpg' %}')">
+        <div class="container">
+            <div class="row">ц
+                <div class="col-12 col-lg-12">
+                    <div class="page-heading text-white">
+                        <h1>{% trans 'Производство' %}</h1>
+                    </div>
+                    <div class="breadcrumb-wrap">
+                        <nav>
+                            <ol class="breadcrumb">
+                              <li class="breadcrumb-item"><a href="{% url 'home' %}">{% trans 'Главная' %}</a></li>
+                              <li class="breadcrumb-item active" aria-current="page">{% trans 'Производство' %}</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="our-service-wrapper section-padding bg-gray">
+        <div class="container">
+            <div class="row mtm-40 justify-content-evenly align-items-space-between">
+                {% for item in production %}
+                <div class="col-xl-3 col-md-6 col-12">
+                    <div class="single-service-card single-product-card">
+                        <div class="service-cover-img bg-cover" style="background-image: url('{{item.cover.url}}')"></div>
+                        <div class="content product-content">
+                            <div class="icon-title">
+                               
+                                <div class="service-title product-title">
+                                    <h4><a href="{{item.get_url}}">{{item.title}}</a></h4>
+                                </div>
+                            </div>
+                            
+                            <a href="{{item.get_url}}" class="read-more">Подробнее.. <i class="fal fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+                
+                
+            </div>
+        </div>
+    </section>
+
+   
+
+    {% endblock %}

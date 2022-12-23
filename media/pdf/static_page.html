@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+{% load i18n static %}
+{% block content %}
+      {% for i in settings %}
+
+   <div class="page-banner-wrap bg-cover" style="background: linear-gradient(40deg, rgb(0 0 0 / 49%), rgb(34 101 163 / 0%)), url('{{ i.thumbnail.url }}'); background-size:cover !important; ">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-12">
+                    <div class="page-heading text-white">
+                        <h1>{{ static.title }}</h1>
+                    </div>
+                    <div class="breadcrumb-wrap">
+                        <nav>
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="{% url 'home' %}">{% trans 'Главная' %}</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">{{ static.title }}</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        {% endfor %}
+
+<section class="blog-wrapper news-wrapper section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-lg-8">
+                <div class="blog-posts">
+                    <div class="single-blog-post">
+
+                        <div class="post-content-tender">
+
+                            <div class="tender-post">
+                                <h2><a href="{{ static.get_url }}">{{ static.title }}</a></h2>
+                                <div class="print-js"><i class="fal fa-print"></i></div>
+
+                            </div>
+                            <div class="tender-box">
+
+
+
+
+
+                            </div>
+
+                            <p>{{ static.content|safe }}</p>
+
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-12 col-lg-4">
+                <div class="main-sidebar">
+
+                    <div class="single-sidebar-widget">
+                        <div class="wid-title">
+                            <h3>Новости</h3>
+                        </div>
+                        <div class="popular-posts">
+                            {% for item in popular_news %}
+                            <div class="single-post-item">
+                                <div class="thumb bg-cover" style="background-image: url('{{ item.image.url }}')"></div>
+                                <div class="post-content">
+                                    <h5><a href="{{ item.get_url }}">{{ item.title }}</a></h5>
+                                    <div class="post-date">
+                                        <i class="far fa-calendar-alt"></i>{{ item.date }}
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

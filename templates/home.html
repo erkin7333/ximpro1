@@ -1,0 +1,252 @@
+{% extends 'base.html' %}
+{% load i18n static %}
+
+{% block content %}
+<section class="hero-wrapper hero-1">
+    <div class="hero-slider-active owl-carousel owl-drag">
+        {% for item in banner %}
+        <div class="single-slide bg-cover " style="background-image: url('{{ item.image.url }}'); z-index:50; position: relative; height: 110%;">
+           <div class="overlay-banner"></div>
+	    <div class="container">
+                <div class="row">   
+                    <div class="col-12 ps-md-5 pe-md-5 col-xxl-7 col-lg-8 col-md-8 col-sm-10">
+                        <div class="hero-contents pe-lg-3">
+                            <h1 class="fs-lg wow fadeInLeft  animated" data-wow-duration="1.3s"
+                                style="visibility: visible; text-transform: none !important;  animation-duration: 1.3s; animation-name: fadeInLeft; font-size: 40px !important; font-family:'Times New Roman'; ">{{ item.title }}</h1>
+                            <p class="pe-lg-5 wow fadeInLeft  animated" data-wow-duration="1.3s" data-wow-delay=".4s"
+                                style="visibility: visible; animation-duration: 1.3s; animation-delay: 0.4s; animation-name: fadeInLeft; font-family:'Times New Roman';">
+                               {{ item.description }}</p>
+                            <a href="{{ item.link }}" class="theme-btn me-sm-4 wow fadeInLeft" data-wow-duration="1.2s"
+                                data-wow-delay=".8s"
+                                style="visibility: hidden; animation-duration: 1.2s; animation-delay: 0.8s; animation-name: none;">{% trans 'Подробнее' %}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+
+    </div>
+</section>
+
+<section class="portfolio-carousel-wrapper clearfix section-padding">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8 col-xl-7 col-12">
+                <div class="block-contents">
+                    <div class="section-title">
+                        <span>{% trans 'Наши проекты &amp; Спец техника' %}</span>
+                        <h2>{% trans 'ПОСЛЕДНИЕ ЗАВЕРШЕННЫЕ ПРОЕКТЫ' %}</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 offset-lg-1 col-xl-3 offset-xl-2 text-lg-end col-12">
+                <a href="{% url 'projects' %}" class="theme-btn">{% trans 'Cмотреть больше' %}</a>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-carousel-active owl-carousel owl-loaded
+                owl-drag">
+        {% for item in projects %}
+        <div class="owl-stage-outer">
+            <div class="owl-stage">
+                <div class="owl-item" style="width: 100%">
+                    <div class="single-project-item">
+                        <a href="{{ item.image.url }}" class="project-img bg-cover bg-center
+                                    popup-gallery" style="background-image:
+                                    url('{{ item.image.url }}')">
+                            <div class="icon">
+                                <i class="fal fa-plus"></i>
+                            </div>
+                        </a>
+                        <div class="content-text">
+                            <span>{{ item.type }}</span>
+                            <h4><a href="{{ item.get_url }}">{{ item.title }}</a></h4>
+                            <p>{{ item.date }}</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        {% endfor %}
+
+    </div>
+</section>
+
+
+
+
+<section class="faq-funfact-section section-padding">
+    <div class="container">
+        <div class="fun-fact-wrapper text-white mtm-30 text-center">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="single-fun-fact mb-4 mb-lg-0">
+                        <h2><span class="is-visible" style="visibility:
+                                        visible;">{% trans 'Кол-во выполненных проектов' %}</span>K+</h2>
+                        <h3>{% trans 'ПРОЕКТОВ ВЫПОЛНЕНО' %}</h3>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="single-fun-fact mb-4 mb-lg-0">
+                        <h2><span class="is-visible" style="visibility:
+                                        visible;">{% trans 'Кол-во счастливых клиентов' %}</span>+</h2>
+                        <h3>{% trans 'СЧАСТЛИВЫЕ КЛИЕНТЫ' %}</h3>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12 mb-4 mb-md-0">
+                    <div class="single-fun-fact">
+                        <h2><span class="is-visible" style="visibility:
+                                        visible;">{% trans 'кол-во Квалифицированных сотрудников' %}</span>+</h2>
+                        <h3>{% trans 'Квалифицированный сотрудник' %}</h3>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="single-fun-fact">
+                        <h2><span class="is-visible" style="visibility:
+                                        visible;">{% trans 'кол-во стран' %}</span>+</h2>
+                        <h3>{% trans 'Страны' %}</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="faq-wrapper section-padding pb-0">
+            <div class="row equal">
+                <div class="col-lg-6 col-12 col-xl-7 pe-lg-0">
+                    <div class="faq-content">
+                        <div class="faq-accordion">
+                            <div class="accordion" id="accordion">
+
+                                <div class="accordion-item">
+                                    <h4 class="accordion-header">
+                                        <button class="accordion-button
+                                                    collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#faq1" aria-expanded="false" aria-controls="faq1">
+                                            {% trans 'Как мне найти правильный архитектор моего проекта?' %}
+                                        </button>
+                                    </h4>
+                                    <div id="faq1" class="accordion-collapse
+                                                collapse show" data-bs-parent="#accordion">
+                                        <div class="accordion-body">
+                                            {% trans 'Мы намеренно никогда разработал стилистический формула для нашей работы, поэтому наш проекты никогда не выглядят или чувствую тоже самое. Каждый из наших пространства является результатом нашей умение слушать.' %}
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                    <h4 class="accordion-header">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#faq2" aria-expanded="true" aria-controls="faq2">
+                                            {% trans 'Какие услуги оказывают архитекторы?' %}
+                                        </button>
+                                    </h4>
+                                    <div id="faq2" class="accordion-collapse
+                                                collapse" data-bs-parent="#accordion">
+                                        <div class="accordion-body">
+                                            {% trans 'услуги' %}
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                    <h4 class="accordion-header">
+                                        <button class="accordion-button
+                                                    collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+                                            {% trans 'Почему я должен выбрать вас?' %}
+                                        </button>
+                                    </h4>
+                                    <div id="faq3" class="accordion-collapse
+                                                collapse" data-bs-parent="#accordion">
+                                        <div class="accordion-body">
+                                            {% trans 'У нас особый подход в работе с клиентом, учитыем все пожелания, доступные цены и хорошая отзывчевая команда' %}
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="accordion-item">
+                                    <h4 class="accordion-header">
+                                        <button class="accordion-button
+                                                    collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#faq5" aria-expanded="false">
+                                            {% trans 'Умеете ли вы работать с клиентами длинный на расстояние?' %}
+                                        </button>
+                                    </h4>
+                                    <div id="faq5" class="accordion-collapse
+                                                collapse" aria-labelledby="faq5" data-bs-parent="#accordion">
+                                        <div class="accordion-body">
+                                            {% trans 'Конечноже да наша служба поддержки работает 24/7' %}
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-5 col-lg-6 col-12 ps-lg-0">
+                    <div class="video-popup-wrapper d-flex
+                                justify-content-center align-items-center
+                                bg-cover
+                                bg-center" style="background-image:
+                                url('{% static 'assets/img/faq-bg.jpg' %}')">
+                        <div class="video-play-btn">
+                            <a href="{% trans 'home video link' %}" class="popup-video play-video"><i
+                                    class="fas
+                                            fa-play"></i></a>
+                        </div>
+                    </div>
+                    <div class="box-cta-call d-flex align-items-center
+                                justify-content-between">
+                        
+                        <div class="content-text">
+                            <span>{% trans 'Служба поддержки' %}</span>
+                            <h3>{% trans '+998 (70) 716-43-36' %}</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="news-wrapper section-padding pt-0">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-12">
+                <div class="block-contents">
+                    <div class="section-title">
+                        <span>{% trans 'НАШ БЛОГ' %}</span>
+                        <h2>{% trans 'Последние новости' %}</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            {% for item in news %}
+            <div class="col-xl-4 col-md-6 col-12">
+                <div class="single-blog-card style-1">
+                    <div class="blog-featured-img bg-cover bg-center" style="background-image:
+                                url('{{ item.image.url}}')"></div>
+                    <div class="contents">
+                        <div class="post-metabar d-flex
+                                    justify-content-between align-items-center">
+                            <div class="post-date">
+                                <i class="fal fa-calendar-alt"></i>
+                                <a href="#">{{ item.date }}</a>
+                            </div>
+                        </div>
+                        <h3><a href="{{ item.get_url }}">{{ item.title }}</a></h3>
+                        <a href="{{ item.get_url }}" class="read-more-link">{% trans 'Подробнее..' %}</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}

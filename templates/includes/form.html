@@ -1,0 +1,32 @@
+{% load i18n %}
+                       <form action="" method="POST" class="row" id="contact-form">
+                            {% csrf_token %}
+                            <div class="col-md-6 col-12">
+                                <div class="single-personal-info">
+                                    {{ form.name }}                                         
+                                </div>
+                            </div>                            
+                            <div class="col-md-6 col-12">
+                                <div class="single-personal-info">
+                                    {{ form.email }}                                         
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-12">
+                                <div class="single-personal-info">
+                                    {{ form.phone }}                                         
+                                </div>
+                            </div>                                      
+                            <div class="col-md-6 col-12">
+                                <div class="single-personal-info">
+                                    {{ form.theme }}                                         
+                                </div>
+                            </div>                                      
+                            <div class="col-md-12 col-12">
+                                <div class="single-personal-info">
+                                    {{ form.message }}                                        
+                                </div>
+                            </div>                                      
+                            <div class="col-md-12 col-12">
+                                <input class="submit-btn" type="submit" value="{% trans 'Отправить' %}">
+                            </div>                                      
+                        </form>

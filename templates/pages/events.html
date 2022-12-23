@@ -1,0 +1,67 @@
+
+{% extends 'base.html' %}
+{% load i18n static %}
+{% block content %}
+    {% for i in settings %}
+
+        <div class="page-banner-wrap bg-cover" style="background: linear-gradient(40deg, rgb(0 0 0 / 49%), rgb(34 101 163 / 0%)), url('{{ i.thumbnail.url }}'); background-size:cover !important; ">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-12">
+                    <div class="page-heading text-white">
+                        <h1>{% trans 'Мероприятия' %}</h1>
+                    </div>
+                    <div class="breadcrumb-wrap">
+                        <nav>
+                            <ol class="breadcrumb">
+                              <li class="breadcrumb-item"><a href="{% url 'home' %}">{% trans 'Главная' %}</a></li>
+                              <li class="breadcrumb-item active" aria-current="page">{% trans 'Мероприятия' %}</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+<section class="news-wrapper section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-12">
+                    <div class="block-contents">
+                        <div class="section-title">
+
+                            <h2>{% trans 'Мероприятия' %}</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                {% for item in news %}
+                <div class="col-xl-4 col-md-6 col-12">
+                    <div class="single-blog-card style-1">
+                        <div class="blog-featured-img bg-cover bg-center"
+                            style="background-image:
+                            url('{{ item.image.url }}')"></div>
+                        <div class="contents">
+                            <div class="post-metabar d-flex
+                                justify-content-between align-items-center">
+                                <div class="post-date">
+                                    <i class="fal fa-calendar-alt"></i>
+                                    <a href="#">{{ item.date }}</a>
+                                </div>
+                            </div>
+                            <h3><a href="{{ item.get_url }}">{{ item.title }}</a></h3>
+                                <a href="{{ item.get_url }}"
+                                    class="read-more-link">{% trans 'Подробнее..' %}</a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+   
+    {% endblock %}

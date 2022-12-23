@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load i18n static %}
+{% block content %}
+        {% for i in settings %}
+
+     <div class="page-banner-wrap bg-cover" style="background: linear-gradient(40deg, rgb(0 0 0 / 49%), rgb(34 101 163 / 0%)), url('{{ i.thumbnail.url }}'); background-size:cover !important; ">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-12">
+                    <div class="page-heading text-white">
+                        <h1>{{news.title}}</h1>
+                    </div>
+                    <div class="breadcrumb-wrap">
+                        <nav>
+                            <ol class="breadcrumb">
+                              <li class="breadcrumb-item"><a href="{% url 'news' %}">{% trans 'Главная' %}</a></li>
+                              <li class="breadcrumb-item active" aria-current="page">{{news.title}}</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        {% endfor %}
+     <section class="blog-wrapper news-wrapper section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-12">
+                    <div class="blog-posts">
+                        <div class="single-blog-post" style="flex-direction: column">
+                            <div class="post-featured-thumb bg-cover" style="background-image: url('{{ news.image.url }}')"></div>
+                            <div class="post-content">
+
+                                <h2><a href="{{ news.get_url }}">{{ news.title }}</a></h2>
+                                <div class="post-meta">
+
+                                    <span><i class="fal fa-calendar-alt"></i>{{ news.date }}</span>
+                                </div>
+                                <p>{{ news.description|safe }}</p>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

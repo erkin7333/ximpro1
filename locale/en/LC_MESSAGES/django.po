@@ -1,0 +1,646 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-08-29 10:56+0000\n"
+"PO-Revision-Date: 2022-08-31 04:44+0000\n"
+"Last-Translator:   <>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Translated-Using: django-rosetta 0.9.8\n"
+
+#: main/forms.py:5
+msgid "Имя"
+msgstr "Name"
+
+#: main/forms.py:6
+msgid "Почта"
+msgstr "Mail"
+
+#: main/forms.py:7
+msgid "Номер"
+msgstr "Number"
+
+#: main/forms.py:8
+msgid "Тема обращения"
+msgstr "Topic"
+
+#: main/forms.py:9
+msgid "Коментарий"
+msgstr "Comment"
+
+#: main/models.py:15 main/models.py:35 main/models.py:52 main/models.py:83
+#: main/models.py:123 main/models.py:160 main/models.py:185 main/models.py:203
+msgid "Title"
+msgstr ""
+
+#: main/models.py:16 main/models.py:37 main/models.py:53 main/models.py:84
+#: main/models.py:161 main/models.py:218
+msgid "Description"
+msgstr ""
+
+#: main/models.py:18 main/models.py:252
+msgid "Link"
+msgstr ""
+
+#: main/models.py:36
+msgid "Short Description"
+msgstr ""
+
+#: main/models.py:39 main/models.py:241
+msgid "Image"
+msgstr ""
+
+#: main/models.py:40
+msgid "Experience"
+msgstr ""
+
+#: main/models.py:46 main/models.py:47
+msgid "About"
+msgstr ""
+
+#: main/models.py:54
+msgid "Type"
+msgstr ""
+
+#: main/models.py:57 main/models.py:90 main/models.py:143 main/models.py:163
+#: main/models.py:189 main/models.py:222
+msgid "Slug"
+msgstr ""
+
+#: main/models.py:61
+msgid "Сustomer"
+msgstr ""
+
+#: main/models.py:62 main/models.py:92 main/models.py:127 main/models.py:164
+msgid "Date"
+msgstr ""
+
+#: main/models.py:63 main/models.py:77 main/models.py:78
+msgid "Projects"
+msgstr ""
+
+#: main/models.py:64
+msgid "Know How"
+msgstr ""
+
+#: main/models.py:65
+msgid "Completed Job"
+msgstr ""
+
+#: main/models.py:66
+msgid "New Developments"
+msgstr ""
+
+#: main/models.py:67 main/models.py:93
+msgid "Order"
+msgstr ""
+
+#: main/models.py:87 main/models.py:103 main/models.py:104
+msgid "News"
+msgstr ""
+
+#: main/models.py:88
+msgid "Events"
+msgstr ""
+
+#: main/models.py:117 main/models.py:118
+msgid "Site settings"
+msgstr ""
+
+#: main/models.py:126 main/models.py:224
+msgid "Number"
+msgstr ""
+
+#: main/models.py:138
+msgid "Parent"
+msgstr ""
+
+#: main/models.py:141 main/models.py:216
+msgid "Name"
+msgstr ""
+
+#: main/models.py:144
+msgid "Images"
+msgstr ""
+
+#: main/models.py:148 main/models.py:149
+msgid "Navbar"
+msgstr ""
+
+#: main/models.py:165
+msgid "Until Date"
+msgstr ""
+
+#: main/models.py:166
+msgid "Until Hour"
+msgstr ""
+
+#: main/models.py:167
+msgid "Applications"
+msgstr ""
+
+#: main/models.py:168
+msgid "View Count"
+msgstr ""
+
+#: main/models.py:177 main/models.py:178
+msgid "Tender"
+msgstr ""
+
+#: main/models.py:186
+msgid "Content"
+msgstr ""
+
+#: main/models.py:188
+msgid "Category"
+msgstr ""
+
+#: main/models.py:198 main/models.py:199
+msgid "Static Content"
+msgstr ""
+
+#: main/models.py:210 main/models.py:211
+msgid "Pdf File"
+msgstr ""
+
+#: main/models.py:217
+msgid "Position"
+msgstr ""
+
+#: main/models.py:219
+msgid "Adress"
+msgstr ""
+
+#: main/models.py:223
+msgid "image"
+msgstr ""
+
+#: main/models.py:225 templates/pages/membership_detail.html:50
+msgid "Email"
+msgstr ""
+
+#: main/models.py:236 main/models.py:237
+msgid "Membership"
+msgstr ""
+
+#: main/models.py:247 main/models.py:248
+msgid "Gallery"
+msgstr ""
+
+#: main/models.py:258 main/models.py:259
+msgid "Video"
+msgstr ""
+
+#: templates/base.html:11
+msgid "УЗКИМЁСАНОАТЛОЙИХА"
+msgstr "JSS \"UZKIMYOSANOATLOYIHA\""
+
+#: templates/base.html:106
+msgid "Загрузка..."
+msgstr "Loading..."
+
+#: templates/base.html:133 templates/includes/footer.html:88
+#: templates/includes/footer.html:118 templates/includes/header.html:13
+msgid "АО \"УЗКИМЁСАНОАТЛОЙИХА\""
+msgstr "\"UZKIMYOSANOATLOYIHA\""
+
+#: templates/base.html:134 templates/includes/footer.html:89
+#: templates/includes/header.html:14
+msgid "Акционерное обшество"
+msgstr "Joint-stock company"
+
+#: templates/base.html:140 templates/pages/about.html:12
+#: templates/pages/gallery.html:13 templates/pages/video.html:12
+msgid "О нас"
+msgstr "ABOUT US"
+
+#: templates/base.html:141
+msgid ""
+"Своевременное обеспечение техдокументацией для строительства объектов и "
+"осуществление авторского надзора за строительством объектов0000 "
+msgstr ""
+"Timely provision of technical documentation for the construction of "
+"facilities and the implementation of architectural supervision of the "
+"construction of facilities"
+
+#: templates/base.html:142 templates/home.html:244
+#: templates/pages/events.html:58
+msgid "Подробнее.."
+msgstr "More.."
+
+#: templates/base.html:145
+msgid "Наши контакты"
+msgstr "Contacts"
+
+#: templates/base.html:148 templates/includes/footer.html:36
+msgid ""
+"Республика Узбекистан, Ташкентская область, город Чирчик, ул.Ташкентская 4."
+msgstr ""
+"Republic of Uzbekistan, Tashkent Region, Chirchik City, Tashkent St.4."
+
+#: templates/base.html:150 templates/home.html:207
+#: templates/includes/footer.html:18 templates/pages/citizen.html:64
+#: templates/pages/contact.html:62 templates/pages/kartel.html:64
+msgid "+998 (70) 716-43-36"
+msgstr "+99870-715-27-67"
+
+#: templates/base.html:151 templates/includes/footer.html:27
+#: templates/pages/citizen.html:55 templates/pages/contact.html:53
+#: templates/pages/kartel.html:55
+msgid "office@himproekt.uz"
+msgstr ""
+
+#: templates/home.html:21
+msgid "Подробнее"
+msgstr "More"
+
+#: templates/home.html:38
+msgid "Наши проекты &amp; Спец техника"
+msgstr "Our projects"
+
+#: templates/home.html:39
+msgid "ПОСЛЕДНИЕ ЗАВЕРШЕННЫЕ ПРОЕКТЫ"
+msgstr "COMPLETED PROJECTS"
+
+#: templates/home.html:44
+msgid "Cмотреть больше"
+msgstr "See more"
+
+#: templates/home.html:87
+msgid "Кол-во выполненных проектов"
+msgstr "500"
+
+#: templates/home.html:88
+msgid "ПРОЕКТОВ ВЫПОЛНЕНО"
+msgstr "PROJECTS COMPLETED"
+
+#: templates/home.html:94
+msgid "Кол-во счастливых клиентов"
+msgstr "300"
+
+#: templates/home.html:95
+msgid "СЧАСТЛИВЫЕ КЛИЕНТЫ"
+msgstr "HAPPY CUSTOMERS"
+
+#: templates/home.html:101
+msgid "кол-во Квалифицированных сотрудников"
+msgstr "100"
+
+#: templates/home.html:102
+msgid "Квалифицированный сотрудник"
+msgstr "Qualified employee"
+
+#: templates/home.html:108
+msgid "кол-во стран"
+msgstr "25"
+
+#: templates/home.html:109
+msgid "Страны"
+msgstr "Countries"
+
+#: templates/home.html:126
+msgid "Как мне найти правильный архитектор моего проекта?"
+msgstr "How do I find the right architect for my project?"
+
+#: templates/home.html:132
+msgid ""
+"Мы намеренно никогда разработал стилистический формула для нашей работы, "
+"поэтому наш проекты никогда не выглядят или чувствую тоже самое. Каждый из "
+"наших пространства является результатом нашей умение слушать."
+msgstr ""
+"We deliberately never developed a stylistic formula for our work, so our "
+"designs never look or feel the same. Each of our spaces is the result of our"
+" ability to listen."
+
+#: templates/home.html:141
+msgid "Какие услуги оказывают архитекторы?"
+msgstr "What services does the institute provide?"
+
+#: templates/home.html:147
+msgid "услуги"
+msgstr "Project work in all directions"
+
+#: templates/home.html:157
+msgid "Почему я должен выбрать вас?"
+msgstr "Why should I choose you?"
+
+#: templates/home.html:163
+msgid ""
+"У нас особый подход в работе с клиентом, учитыем все пожелания, доступные "
+"цены и хорошая отзывчевая команда"
+msgstr ""
+"We have a special approach to working with a client, taking into account all"
+" the wishes, affordable prices and a good responsive team"
+
+#: templates/home.html:175
+msgid "Умеете ли вы работать с клиентами длинный на расстояние?"
+msgstr "Is it possible to contact the developers directly?"
+
+#: templates/home.html:181
+msgid "Конечноже да наша служба поддержки работает 24/7"
+msgstr ""
+"You can get answers to any questions by contacting the developers directly"
+
+#: templates/home.html:197
+msgid "home video link"
+msgstr "https://www.youtube.com/watch?v=Rpg3K1Q82t4"
+
+#: templates/home.html:206
+msgid "Служба поддержки"
+msgstr "To contact"
+
+#: templates/home.html:222
+msgid "НАШ БЛОГ"
+msgstr "OUR BLOG"
+
+#: templates/home.html:223
+msgid "Последние новости"
+msgstr "Last news"
+
+#: templates/includes/footer.html:10 templates/pages/citizen.html:40
+#: templates/pages/contact.html:38 templates/pages/kartel.html:40
+msgid "СВЯЗАТЬСЯ"
+msgstr "CONTACT"
+
+#: templates/includes/footer.html:47
+msgid "Быстрые ссылки"
+msgstr "Quick links"
+
+#: templates/includes/footer.html:60
+msgid "Новостная рассылка"
+msgstr "Useful links"
+
+#: templates/includes/footer.html:65
+msgid "Единый портал интерактивных государственных услуг"
+msgstr ""
+
+#: templates/includes/footer.html:94
+msgid "facebook link"
+msgstr ""
+
+#: templates/includes/footer.html:95
+msgid "telegram link"
+msgstr ""
+
+#: templates/includes/footer.html:96
+msgid "instagram link"
+msgstr ""
+
+#: templates/includes/footer.html:103
+msgid ""
+"Станьте инновационным предпринимателем &amp; уполномоченная компания, "
+"постоянно создающая миссия быть строительством мирового класса"
+msgstr ""
+"A person who does at least something to change his life is much more likely "
+"to succeed than someone who does nothing."
+
+#: templates/includes/footer.html:107
+msgid ""
+"Копирование, тиражирование, распространение и иное использование информации "
+"с сайта «www.himproekt.uz» возможно только с предварительного письменного "
+"разрешения АО \"Узкимесаноатлойиха\""
+msgstr ""
+"Any copying, reproduction, distribution, and information from the site inoeispolzovanie www.himproekt.uz is possible only with the prior written permission of </br>                                                    \n"
+"JSS \"Uzkimyosanoatloyiha\""
+
+#: templates/includes/footer.html:118
+msgid "© 2022 авторское право "
+msgstr "© 2022 Copyright belongs to JSS    "
+
+#: templates/includes/footer.html:119
+msgid "   Все права защищены"
+msgstr "©"
+
+#: templates/includes/footer.html:126
+msgid "Сайт разработан веб студией"
+msgstr "Website developed by web studio"
+
+#: templates/includes/form.html:30
+msgid "Отправить"
+msgstr "Send"
+
+#: templates/includes/header.html:46 templates/includes/header.html:66
+msgid "Узб"
+msgstr "Uzb"
+
+#: templates/includes/header.html:48 templates/includes/header.html:68
+msgid "Рус"
+msgstr "Rus"
+
+#: templates/includes/header.html:50 templates/includes/header.html:70
+msgid "Инг"
+msgstr "Eng"
+
+#: templates/includes/thanks.html:16
+msgid "Письмо отправлено! "
+msgstr ""
+
+#: templates/includes/thanks.html:18
+msgid "На главную"
+msgstr "Home"
+
+#: templates/pages/about.html:17 templates/pages/citizen.html:18
+#: templates/pages/completed_job.html:16 templates/pages/contact.html:18
+#: templates/pages/events.html:18 templates/pages/gallery.html:18
+#: templates/pages/kartel.html:18 templates/pages/know_how.html:16
+#: templates/pages/membership.html:18
+#: templates/pages/membership_detail.html:18
+#: templates/pages/new_developments.html:16 templates/pages/news.html:18
+#: templates/pages/news_detail.html:17 templates/pages/production.html:15
+#: templates/pages/project-category.html:16
+#: templates/pages/project_detail.html:16
+#: templates/pages/static/static_page.html:17 templates/pages/tenders.html:16
+#: templates/pages/video.html:17
+msgid "Главная"
+msgstr "Home"
+
+#: templates/pages/about.html:18 templates/pages/about.html:45
+#: templates/pages/gallery.html:20 templates/pages/video.html:18
+msgid "О компании"
+msgstr "ABOUT US"
+
+#: templates/pages/about.html:38
+msgid "Лет"
+msgstr "years of"
+
+#: templates/pages/about.html:38
+msgid "Опыта"
+msgstr "experience"
+
+#: templates/pages/citizen.html:13 templates/pages/citizen.html:19
+#: templates/pages/citizen.html:36
+msgid "Обращение Граждан"
+msgstr "Appeal of Citizens"
+
+#: templates/pages/citizen.html:48 templates/pages/contact.html:46
+#: templates/pages/kartel.html:48
+msgid "Контактная Информация"
+msgstr "Contact Information"
+
+#: templates/pages/citizen.html:54 templates/pages/contact.html:52
+#: templates/pages/kartel.html:54
+msgid "Почтовый адрес"
+msgstr "Mailing address"
+
+#: templates/pages/citizen.html:63 templates/pages/contact.html:61
+#: templates/pages/kartel.html:63
+msgid "Позвонить нам"
+msgstr "Call us"
+
+#: templates/pages/citizen.html:72 templates/pages/contact.html:70
+#: templates/pages/kartel.html:72
+msgid "Наш адрес"
+msgstr "Our address"
+
+#: templates/pages/citizen.html:73 templates/pages/contact.html:71
+#: templates/pages/kartel.html:73
+msgid ""
+"Республика Узбекистан, Ташкентская Область, Город Чирчик, Ул.Ташкентская 4."
+msgstr ""
+"Republic of Uzbekistan, Tashkent Region, Chirchik City, Tashkent St. 4."
+
+#: templates/pages/completed_job.html:11 templates/pages/completed_job.html:17
+msgid "Выполненные Работы"
+msgstr "Completed works"
+
+#: templates/pages/contact.html:13 templates/pages/contact.html:19
+msgid "Контакты"
+msgstr "Contacts"
+
+#: templates/pages/events.html:13 templates/pages/events.html:19
+#: templates/pages/events.html:35
+msgid "Мероприятия"
+msgstr "Events"
+
+#: templates/pages/gallery.html:39
+msgid "Фотогалерея"
+msgstr "Photo gallery"
+
+#: templates/pages/kartel.html:13 templates/pages/kartel.html:19
+#: templates/pages/kartel.html:36
+msgid "Сообщить о картели"
+msgstr "Report cartel"
+
+#: templates/pages/know_how.html:11 templates/pages/know_how.html:17
+msgid "Ноу Хау"
+msgstr "Know How"
+
+#: templates/pages/membership.html:13
+#: templates/pages/membership_detail.html:13
+msgid "Руководство"
+msgstr "Management"
+
+#: templates/pages/membership.html:19
+#: templates/pages/membership_detail.html:19
+msgid "Руководства"
+msgstr "MANAGEMENT"
+
+#: templates/pages/membership.html:35
+msgid "Руководители"
+msgstr " Managers"
+
+#: templates/pages/membership_detail.html:46
+msgid "Телефон"
+msgstr "Telephone"
+
+#: templates/pages/membership_detail.html:54
+msgid "Адрес"
+msgstr "Address"
+
+#: templates/pages/new_developments.html:11
+#: templates/pages/new_developments.html:17
+msgid "Новые Разработки"
+msgstr "New Developments"
+
+#: templates/pages/news.html:13 templates/pages/news.html:19
+#: templates/pages/news.html:35
+msgid "Новости"
+msgstr "News"
+
+#: templates/pages/production.html:10 templates/pages/production.html:16
+msgid "Производство"
+msgstr "Production"
+
+#: templates/pages/project-category.html:11
+#: templates/pages/project-category.html:17
+msgid "Проекты"
+msgstr "PROJECTS"
+
+#: templates/pages/project_detail.html:31
+msgid "Имя проекта"
+msgstr "Project name"
+
+#: templates/pages/project_detail.html:35
+msgid "Тип проекта"
+msgstr "Project type"
+
+#: templates/pages/project_detail.html:39
+msgid "Заказчик"
+msgstr "Customer"
+
+#: templates/pages/project_detail.html:43
+msgid "Дата выполнения"
+msgstr "Date of completion"
+
+#: templates/pages/project_detail.html:50
+msgid "О проекте"
+msgstr "About the project"
+
+#: templates/pages/static/static_page.html:36
+msgid "Разделы"
+msgstr "Sections"
+
+#: templates/pages/tender_detail.html:16 templates/pages/tender_detail.html:94
+#: templates/pages/tenders.html:11 templates/pages/tenders.html:17
+msgid "Тендеры"
+msgstr "TENDERS"
+
+#: templates/pages/tender_detail.html:44
+msgid "Дата публикации"
+msgstr "Publication date"
+
+#: templates/pages/tender_detail.html:55 templates/pages/tenders.html:43
+msgid "Заявок"
+msgstr "Applications"
+
+#: templates/pages/tender_detail.html:70 templates/pages/tenders.html:58
+msgid "Срок до"
+msgstr "Deadline up to"
+
+#: templates/pages/tender_detail.html:78 templates/pages/tenders.html:48
+msgid "Просмотров"
+msgstr "Views"
+
+#: templates/pages/tenders.html:35
+msgid "Тендер"
+msgstr "TENDERS"
+
+#: templates/pages/video.html:37
+msgid "Видео"
+msgstr "Video"
+
+#~ msgid "Подписаться"
+#~ msgstr "Subscribe"
+
+#~ msgid "Время работы: "
+#~ msgstr "Working hours:"
+
+#~ msgid " Пон - Пят: 9:30 AM - 10 PM"
+#~ msgstr "Mon - Fri: 08:00 - 18:00"
+
+#~ msgid "Республика Узбекистан, Ташкентская область,"
+#~ msgstr "Republic of Uzbekistan, Tashkent region,"
+
+#~ msgid "город Чирчик, ул.Ташкентская 4."
+#~ msgstr "Chirchik city, Tashkent street 4."

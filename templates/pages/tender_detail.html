@@ -1,0 +1,120 @@
+{% extends 'base.html' %}
+{% load i18n static %}
+{% block content %}
+        {% for i in settings %}
+
+   <div class="page-banner-wrap bg-cover" style="background: linear-gradient(40deg, rgb(0 0 0 / 49%), rgb(34 101 163 / 0%)), url('{{ i.thumbnail.url }}'); background-size:cover !important; ">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-12">
+                    <div class="page-heading text-white">
+                        <h1>{{ tender.title }}</h1>
+                    </div>
+                    <div class="breadcrumb-wrap">
+                        <nav>
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="{% url 'tender' %}">{% trans 'Тендеры' %}</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">{{ tender.title }}</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        {% endfor %}
+    <section class="blog-wrapper news-wrapper section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-lg-8">
+                <div class="blog-posts">
+                    <div class="single-blog-post">
+
+                        <div class="post-content-tender">
+
+                            <div class="tender-post">
+                                <h2><a href="{{ tender.get_url }}">{{ tender.title }}</a></h2>
+                                <div class="print-js"><i class="fal fa-print"></i></div>
+
+                            </div>
+                            <div class="tender-box">
+                                <div class="tender-box-left">
+
+                                    <div class="post-date">
+                                        <p>{% trans 'Дата публикации' %}:</p>
+                                        <i class="fal fa-calendar-alt"></i>
+                                        <a href="#">{{ tender.date|date:"d F Y"  }}</a>
+                                    </div>
+
+
+                                </div>
+
+                                <div class="tender-box-right">
+
+                                    <div class="single-data">
+                                        <p>{% trans 'Заявок' %} <i class="fal fa-file-signature"></i>:</p>
+
+                                        <h6>{{ tender.applications }}</h6>
+                                    </div>
+
+
+                                </div>
+
+
+                            </div>
+
+                            <p>{{ tender.description|safe  }}</p>
+
+                            <div class="tender-after-box">
+                                <div class="post-date">
+                                    <p>{% trans 'Срок до' %}:</p>
+                                    <i class="fal fa-calendar-alt"></i>
+                                    <a href="#">{{ tender.until_date|date:"d F Y"  }}</a>
+                                    <span><i class="fal fa-clock"></i>{{ tender.until_hour }}</span>
+
+                                </div>
+
+                                <div class="single-data">
+                                    <p>{% trans 'Просмотров' %} <i class="fal fa-eye"></i>:</p>
+
+                                    <h6>{{ tender.view_count }}</h6>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-12 col-lg-4">
+                <div class="main-sidebar">
+
+                    <div class="single-sidebar-widget">
+                        <div class="wid-title">
+                            <h3>{% trans 'Тендеры' %}</h3>
+                        </div>
+                        <div class="popular-posts">
+                            {% for item in all_tender %}
+                            <div class="single-post-item">
+
+                                <div class="post-content">
+                                    <h5><a href="{{ item.get_url }}">{{ item.title }}</a>
+                                    </h5>
+                                    <div class="post-date">
+                                        <i class="far fa-calendar-alt"></i>{{ tender.date|date:"d F Y"  }}
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+
+
