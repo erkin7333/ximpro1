@@ -1,5 +1,5 @@
 from django import forms
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 class ContactForm(forms.Form):
 	name = forms.CharField(max_length = 50, widget=forms.TextInput(attrs={"placeholder": _('Имя')}))
