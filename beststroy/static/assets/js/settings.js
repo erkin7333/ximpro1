@@ -59,7 +59,9 @@ function speak() {
   if (!isVoiceAssistantOn) return;
   const message = new SpeechSynthesisUtterance();
   message.text = document.getSelection().toString();
-  message.lang = document.location.href.includes("/ru/") ? "ru-RU" : "en-US";
+  const lang = document.location.href.includes("/ru/") ? "ru-RU" : document.location.href.includes("/en/") ? "en-US" : "uz";
+  message.lang = lang;
+  console.log(message.lang);
   window.speechSynthesis.speak(message);
 }
 
