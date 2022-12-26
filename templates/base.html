@@ -51,6 +51,11 @@
     <link rel="stylesheet" href="{% static 'assets/css/style.css' %}" />
     <link rel="stylesheet" href="{% static 'assets/css/styles.css' %}" />
     <link rel="stylesheet" href="../static/assets/css/style.css" />
+
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/styles.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/blog.css' %}" />
+    <!-- <link rel="stylesheet" href="../static/assets/css/blog.css"> -->
   </head>
 
   <body class="body-wrapper">
@@ -100,16 +105,8 @@
       </div>
     </div>
 
-    <ul
-      style="
-        background-color: #fff;
-        cursor: pointer;
-        padding: 5px;
-        z-index: 9;
-      "
-      class="settings position-fixed top-50 translate-middle-y"
-    >
-      <li>
+    <ul class="settings">
+      <li class="settings__voice-helper disabled">
         <svg
           width="24"
           height="24"
@@ -120,6 +117,49 @@
         >
           <path
             d="M15 23l-9.309-6h-5.691v-10h5.691l9.309-6v22zm-9-15.009v8.018l8 5.157v-18.332l-8 5.157zm14.228-4.219c2.327 1.989 3.772 4.942 3.772 8.229 0 3.288-1.445 6.241-3.77 8.229l-.708-.708c2.136-1.791 3.478-4.501 3.478-7.522s-1.342-5.731-3.478-7.522l.706-.706zm-2.929 2.929c1.521 1.257 2.476 3.167 2.476 5.299 0 2.132-.955 4.042-2.476 5.299l-.706-.706c1.331-1.063 2.182-2.729 2.182-4.591 0-1.863-.851-3.529-2.184-4.593l.708-.708zm-12.299 1.299h-4v8h4v-8z"
+          />
+        </svg>
+      </li>
+      <li class="settings__font-increase">
+        <svg
+          clip-rule="evenodd"
+          fill-rule="evenodd"
+          stroke-linejoin="round"
+          stroke-miterlimit="2"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="m11 11h-7.25c-.414 0-.75.336-.75.75s.336.75.75.75h7.25v7.25c0 .414.336.75.75.75s.75-.336.75-.75v-7.25h7.25c.414 0 .75-.336.75-.75s-.336-.75-.75-.75h-7.25v-7.25c0-.414-.336-.75-.75-.75s-.75.336-.75.75z"
+            fill-rule="nonzero"
+          />
+        </svg>
+      </li>
+      <li class="settings__font-decrease">
+        <svg
+          clip-rule="evenodd"
+          fill-rule="evenodd"
+          stroke-linejoin="round"
+          stroke-miterlimit="2"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="m21 11.75c0-.414-.336-.75-.75-.75h-16.5c-.414 0-.75.336-.75.75s.336.75.75.75h16.5c.414 0 .75-.336.75-.75z"
+            fill-rule="nonzero"
+          />
+        </svg>
+      </li>
+      <li class="settings__color-changer">
+        <svg
+          width="24"
+          height="24"
+          xmlns="http://www.w3.org/2000/svg"
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+        >
+          <path
+            d="M12.01 20c-5.065 0-9.586-4.211-12.01-8.424 2.418-4.103 6.943-7.576 12.01-7.576 5.135 0 9.635 3.453 11.999 7.564-2.241 4.43-6.726 8.436-11.999 8.436zm-10.842-8.416c.843 1.331 5.018 7.416 10.842 7.416 6.305 0 10.112-6.103 10.851-7.405-.772-1.198-4.606-6.595-10.851-6.595-6.116 0-10.025 5.355-10.842 6.584zm10.832-4.584c2.76 0 5 2.24 5 5s-2.24 5-5 5-5-2.24-5-5 2.24-5 5-5zm0 1c2.208 0 4 1.792 4 4s-1.792 4-4 4-4-1.792-4-4 1.792-4 4-4z"
           />
         </svg>
       </li>
@@ -205,47 +245,9 @@
     <script src="{% static 'assets/js/active.js' %}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@bjornlu/colorblind"></script>
     <script src="{% static 'assets/js/my-script.js' %}"></script>
-    <script src="{% static 'assets/js/print-js' %}"></script>
-
-    <script>
-      // let s = "{{languages}}";
-      // console.log(s);
-      let isVoiceOn = false;
-
-      const voiceToggler = document.querySelector(".settings li");
-
-      voiceToggler.addEventListener("click", () => {
-        isVoiceOn = !isVoiceOn;
-      });
-
-      function debounce(callee, timeoutMs) {
-        return function perform(...args) {
-          let previousCall = this.lastCall;
-          this.lastCall = Date.now();
-          if (previousCall && this.lastCall - previousCall <= timeoutMs) {
-            clearTimeout(this.lastCallTimer);
-          }
-          this.lastCallTimer = setTimeout(() => callee(...args), timeoutMs);
-        };
-      }
-
-      function speak() {
-        if (!isVoiceOn) return;
-        // console.log(document.querySelector('.settings').getAttribute('data-lang'));
-        const message = new SpeechSynthesisUtterance();
-        message.text = document.getSelection().toString();
-        message.lang = document.location.href.includes("/ru/")
-          ? "ru-RU"
-          : "en-US";
-        window.speechSynthesis.speak(message);
-      }
-
-      const debouncedHandle = debounce(speak, 1000);
-
-      document.addEventListener("selectionchange", debouncedHandle);
-    </script>
-
+    <script src="{% static 'assets/js/settings.js' %}"></script>
     <a
       id="scrollUp"
       href="#top"
