@@ -101,4 +101,3 @@ class File(admin.ModelAdmin):
 admin.site.register(Gallery)
 admin.site.register(Video)
 
-

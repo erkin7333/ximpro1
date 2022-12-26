@@ -180,7 +180,8 @@ def static_content(request, slug):
         category = None
         static_all = None
     static = StaticContent.objects.get(slug=slug)
-    print('statik:', static_all)
+    print('statik:==================================================', static_all)
+    print('statik:==================================================', static)
     context = {
         'static': static,
         'static_all': static_all,
@@ -274,3 +275,7 @@ def category(request):
         'cat': cat,
     }
     return render(request, 'includes/header.html', context)
+
+
+def blogpage(request):
+    return render(request, 'pages/blog.html')

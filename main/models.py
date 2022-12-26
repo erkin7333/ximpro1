@@ -15,7 +15,7 @@ class Banner(TranslatableModel):
         title=models.CharField(max_length=200, verbose_name=_('Title')),
         description=models.CharField(max_length=200, verbose_name=_('Description'))
     )
-    link= models.CharField(max_length=400, verbose_name=_('Link'))
+    link = models.CharField(max_length=400, verbose_name=_('Link'))
     image = models.ImageField(upload_to='photos/banners')
     link = models.CharField(max_length=500, blank=True, null=True)
 
@@ -25,9 +25,6 @@ class Banner(TranslatableModel):
     class Meta:
         verbose_name = 'Banner'
         verbose_name_plural = 'Banners'
-
-
-
 
 
 class About(TranslatableModel):
@@ -178,25 +175,25 @@ class Tender(TranslatableModel):
         verbose_name_plural = _('Tender')
 
 
-class StaticContent(TranslatableModel):
-    """ Static Content MODEL """
-
-    translations = TranslatedFields(
-        title=models.CharField(max_length=255, verbose_name=_('Title')),
-        content=RichTextField(verbose_name=_('Content')),
-    )
-    category = models.ForeignKey(Category, blank=True, null=True, on_delete=models.SET_NULL ,verbose_name=_('Category'))
-    slug = models.CharField(blank=True, null=True, verbose_name=_("Slug"), max_length=500)
-
-    def get_url(self):
-        return reverse('static_page', args=[self.slug])
-
-    def __str__(self):
-        return f"{self.safe_translation_getter('title', '-')}"
-
-    class Meta:
-        verbose_name = _('Static Content')
-        verbose_name_plural = _('Static Content')
+# class StaticContent(TranslatableModel):
+#     """ Static Content MODEL """
+#
+#     translations = TranslatedFields(
+#         title=models.CharField(max_length=255, verbose_name=_('Title')),
+#         content=RichTextField(verbose_name=_('Content')),
+#     )
+#     category = models.ForeignKey(Category, blank=True, null=True, on_delete=models.SET_NULL ,verbose_name=_('Category'))
+#     slug = models.CharField(blank=True, null=True, verbose_name=_("Slug"), max_length=500)
+#
+#     def get_url(self):
+#         return reverse('static_page', args=[self.slug])
+#
+#     def __str__(self):
+#         return f"{self.safe_translation_getter('title', '-')}"
+#
+#     class Meta:
+#         verbose_name = _('Static Content')
+#         verbose_name_plural = _('Static Content')
 
 
 class File(models.Model):
@@ -216,7 +213,7 @@ class Membership(TranslatableModel):
         name=models.CharField(max_length=250, verbose_name=_('Name')),
         position=models.CharField(max_length=400, verbose_name=_('Position')),
         description=RichTextField(verbose_name=_('Description')),
-        adress = models.CharField(max_length=300, blank=True, null=True, verbose_name=_('Adress')),
+        adress=models.CharField(max_length=300, blank=True, null=True, verbose_name=_('Adress')),
 
     )
     slug = models.CharField(blank=True, null=True, verbose_name=_("Slug"), max_length=500)
@@ -229,8 +226,6 @@ class Membership(TranslatableModel):
 
     def __str__(self):
         return self.name
-
-
 
     class Meta:
         verbose_name = _('Membership')
@@ -257,3 +252,18 @@ class Video(models.Model):
     class Meta:
         verbose_name = _('Video')
         verbose_name_plural = _('Video')
+
+
+class StaticContent(TranslatableModel):
+    translations = TranslatedFields(
+        title=models.CharField(max_length=255, verbose_name=_('Title')),
+        content=RichTextField(verbose_name=_('Content')),
+    )
+    category = models.ForeignKey(Category, blank=True, null=True, on_delete=models.SET_NULL, verbose_name=_('Category'))
+    slug = models.CharField(blank=True, null=True, verbose_name=_("Slug"), max_length=500)
+
+    def __str__(self):
+        return f"{self.safe_translation_getter('title')}"
+
+    class Meta:
+        verbose_name = "StaticContent"
