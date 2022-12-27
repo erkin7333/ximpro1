@@ -267,3 +267,25 @@ class StaticContent(TranslatableModel):
 
     class Meta:
         verbose_name = "StaticContent"
+
+
+class Location(models.Model):
+    loc = models.CharField(max_length=1000)
+    def __str__(self):
+        return str(self.loc)
+    class Meta:
+        verbose_name = _("Location")
+
+
+class Blog(TranslatableModel):
+    translations = TranslatedFields(
+        title = models.CharField(max_length=255),
+        subject = models.CharField(max_length=1000),
+        description = models.TextField(),
+    )
+    image = models.ImageField(upload_to='blog')
+    def __str__(self):
+        return self.title
+    class Meta:
+        verbose_name = _('Blog')
+

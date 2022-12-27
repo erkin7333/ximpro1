@@ -98,6 +98,16 @@ class File(admin.ModelAdmin):
     list_display = ('title', 'file')
     list_display_links =  ('file',)
 
+@admin.register(Blog)
+class BlogAdmin(TranslatableAdmin):
+    pass
+
+@admin.register(Location)
+class LocationAdmin(admin.ModelAdmin):
+    list_display = ('id', 'loc')
+    list_display_links = ('id', 'loc')
+
+
 admin.site.register(Gallery)
 admin.site.register(Video)
 

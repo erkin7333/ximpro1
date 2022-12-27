@@ -1,5 +1,5 @@
 from django.db.models import Q
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse
 from main.models import *
 # Create your views here.
@@ -138,7 +138,7 @@ def certificate(request):
 
 def contact(request):
     form = ContactForm()
-
+    location = Location.objects.all()
     if request.method == 'POST':
         form = ContactForm(request.POST)
         if form.is_valid():
@@ -156,7 +156,7 @@ def contact(request):
 
         else:
             print(form.errors)
-    return render(request, 'pages/contact.html', {'form': form})
+    return render(request, 'pages/contact.html', {'form': form, 'location': location})
 
 
 def tables(request):
@@ -205,7 +205,6 @@ def search(request):
 
 def citizen(request):
     form = ContactForm()
-
     if request.method == 'POST':
         form = ContactForm(request.POST)
         if form.is_valid():
@@ -278,4 +277,9 @@ def category(request):
 
 
 def blogpage(request):
-    return render(request, 'pages/blog.html')
+    blogs = Blog.objects.order_by('-id')
+    print("AAAAAAAAAAAAA===============", blogs)
+    context = {
+        'blogs': blogs
+    }
+    return render(request, 'pages/blog.html', context=context)
