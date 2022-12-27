@@ -277,8 +277,7 @@ def category(request):
 
 
 def blogpage(request):
-    blogs = Blog.objects.order_by('-id')
-    print("AAAAAAAAAAAAA===============", blogs)
+    blogs = Blog.objects.all()
     context = {
         'blogs': blogs
     }
