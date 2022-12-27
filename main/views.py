@@ -282,3 +282,7 @@ def blogpage(request):
         'blogs': blogs
     }
     return render(request, 'pages/blog.html', context=context)
+
+def blogdeteil(request):
+
+    return render(request, 'pages/blogdeteil.html')

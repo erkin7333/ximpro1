@@ -29,5 +29,6 @@ urlpatterns = [
     path('membership/<slug:slug>', views.membership_page, name='membership_page'),
     path('tender/<slug:slug>', views.tender_detail, name='tender_detail'),  
     path('content/<slug:slug>', views.static_content, name='static_page'),
-    path('blog/', views.blogpage, name='blogpage')
+    path('blog/', views.blogpage, name='blogpage'),
+    path('blogdeteil/', views.blogdeteil, name='blogdeteil')
 ]
