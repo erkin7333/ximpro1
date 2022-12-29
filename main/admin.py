@@ -6,7 +6,7 @@ from .models import *
 from parler.admin import TranslatableAdmin
 from django.utils.safestring import mark_safe
 
-
+admin.site.register(Visit)
 # Register your models here.
 
 @admin.register(Banner)

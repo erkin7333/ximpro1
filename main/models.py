@@ -9,6 +9,14 @@ from django.utils.text import slugify
 
 
 # Create your models here.
+class Visit(models.Model):
+    ip_address = models.CharField(max_length=20)
+    created_add = models.DateTimeField(auto_now_add=True)
+    def __str__(self):
+        return str(self.ip_address)
+    class Meta:
+        verbose_name = 'Visit'
+
 
 class Banner(TranslatableModel):
     translations = TranslatedFields(
@@ -288,4 +296,6 @@ class Blog(TranslatableModel):
         return self.title
     class Meta:
         verbose_name = _('Blog')
+
+
 

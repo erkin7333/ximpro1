@@ -12,4 +12,4 @@ def home(request):
         'projects':projects,
         'news':news,
     }
-    return render(request, 'home.html', context)
+    return render(request, 'home.html', context=context)

@@ -72,6 +72,7 @@ TEMPLATES = [
                 # Our Context
                 'main.context_processors.settings',
                 'main.context_processors.nav',
+                'main.context_processors.countviews',
             ],
             # Template Tag
             'libraries': {

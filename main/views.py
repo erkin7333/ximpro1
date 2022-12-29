@@ -7,6 +7,10 @@ from django.shortcuts import reverse
 from .forms import ContactForm
 from django.core.mail import send_mail
 from beststroy.settings import DEFAULT_TO_EMAIL, EMAIL_HOST_USER
+from django.contrib.auth import get_user_model
+
+User = get_user_model()
+from django.db.models import Q
 
 
 def tender(request):
@@ -283,6 +287,12 @@ def blogpage(request):
     }
     return render(request, 'pages/blog.html', context=context)
 
-def blogdeteil(request):
 
-    return render(request, 'pages/blogdeteil.html')
+def blogdeteil(request, pk):
+    blog_d = Blog.objects.get(id=pk)
+    context = {
+        'blog_d': blog_d
+    }
+    return render(request, 'pages/blogdeteil.html', context=context)
+
+

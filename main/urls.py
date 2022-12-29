@@ -30,5 +30,5 @@ urlpatterns = [
     path('tender/<slug:slug>', views.tender_detail, name='tender_detail'),  
     path('content/<slug:slug>', views.static_content, name='static_page'),
     path('blog/', views.blogpage, name='blogpage'),
-    path('blogdeteil/', views.blogdeteil, name='blogdeteil')
+    path('blogdeteil/<int:pk>/', views.blogdeteil, name='blogdeteil'),
 ]
